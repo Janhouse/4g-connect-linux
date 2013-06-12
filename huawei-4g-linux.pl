@@ -37,7 +37,7 @@ show_help() if defined $help;
 
 do{ err("No device found at $device (Try specifying it in --device= argument)");exit 1 } if not -e $device and not -z $device;
 do{ err("Device is not readable by the effective user. (Try using root.)"); exit 1 } if not -r $device;
-do{ err("Device us not writable by the effective user. (Try using root.)"); exit 1 } if not -w $device;
+do{ err("Device is not writable by the effective user. (Try using root.)"); exit 1 } if not -w $device;
 
 err("Opening device: $device");
 open( $fh, "+>".$device) or do{ err("Can't read serial port : $!"); exit 1 };
