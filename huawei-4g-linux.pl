@@ -12,6 +12,7 @@ use warnings;
 use strict;
 use Getopt::Long;
 use POSIX "WNOHANG";
+use IO::File;
 use IO::Select;
 STDERR->autoflush(1);
 
